@@ -71,7 +71,7 @@
             "company" : "Boeing",
             "position" : "Software Engineer",
             "startDate" : "2023-03",
-            "endDate" : "",
+            "endDate" : "2024-04",
             "highlights" : [
                 "Developed automated UI integration tests using Selenium for web applications which significantly improved code base test coverage",
                 "Developed Virtual Machine devices for the High Fidelity Digital Twin Program"
