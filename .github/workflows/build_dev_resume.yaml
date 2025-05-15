@@ -29,6 +29,7 @@ jobs:
       - name: Build recent resumes
         continue-on-error: true
         run: |
+          export RESUME_PUPPETEER_NO_SANDBOX=1
           resume export --theme=jsonresume-theme-macea resume.pdf
           resume export --theme=jsonresume-theme-macea resume.html
           mv resume.html index.html
