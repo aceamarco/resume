@@ -73,7 +73,7 @@
             "startDate": "2024-07",
             "endDate": "",
             "highlights": [
-                "Contribute to the front-end of the data-intensive Sell-Side Order Execution (SSOX) application, using TypeScript and C++ to support order negotiation globally, managing a vast number of unique securities and orders.",
+                "Contributed to the front-end of the data-intensive Sell-Side Order Execution (SSOX) application, using TypeScript and C++ to support order negotiation globally, managing a vast number of unique securities and orders.",
                 "Support distributed systems and observability tooling to enhance client performance, stakeholder visibility, and operational resilience across a global user base."
             ]
         },        
