@@ -62,8 +62,6 @@
     ],
     "projects" : [{
         "name" : "Mid-Frequency ML Trading System",
-        "startDate" : "2023-01",
-        "endDate" : "2023-12",
         "highlights" : [
             "Built electronic trading system processing S&P 500 data with neural networks (294K+ parameters) achieving 60%+ model accuracy and sub-100ms signal generation for real-time execution.",
             "Conceived and developed production-grade system with risk management, position sizing, and automated model retraining, featuring real-time P&L tracking and order execution via Alpaca API.",
