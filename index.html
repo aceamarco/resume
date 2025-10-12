@@ -12,72 +12,88 @@
 /*----- Dimensions and sizes -----*/
 /* Base */
 @font-face {
-  font-family: 'Josefin Sans';
+  font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 300;
-  src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3FZQNVED7rKGKxtqIqX5Ecpl5te10k.ttf) format('truetype');
+  src: local("Josefin Sans Light"), local("JosefinSans-Light"),
+    url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3FZQNVED7rKGKxtqIqX5Ecpl5te10k.ttf)
+      format("truetype");
 }
 
 @font-face {
-  font-family: 'Josefin Sans';
+  font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 700;
-  src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3FZQNVED7rKGKxtqIqX5Ectllte10k.ttf) format('truetype');
+  src: local("Josefin Sans Bold"), local("JosefinSans-Bold"),
+    url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3FZQNVED7rKGKxtqIqX5Ectllte10k.ttf)
+      format("truetype");
 }
 
 @font-face {
-  font-family: 'Lato';
+  font-family: "Lato";
   font-style: italic;
   font-weight: 300;
-  src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v16/S6u_w4BMUTPHjxsI9w2_Gwfo.ttf) format('truetype');
+  src: local("Lato Light Italic"), local("Lato-LightItalic"),
+    url(https://fonts.gstatic.com/s/lato/v16/S6u_w4BMUTPHjxsI9w2_Gwfo.ttf)
+      format("truetype");
 }
 
 @font-face {
-  font-family: 'Lato';
+  font-family: "Lato";
   font-style: italic;
   font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v16/S6u8w4BMUTPHjxsAXC-v.ttf) format('truetype');
+  src: local("Lato Italic"), local("Lato-Italic"),
+    url(https://fonts.gstatic.com/s/lato/v16/S6u8w4BMUTPHjxsAXC-v.ttf)
+      format("truetype");
 }
 
 @font-face {
-  font-family: 'Lato';
+  font-family: "Lato";
   font-style: italic;
   font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v16/S6u_w4BMUTPHjxsI5wq_Gwfo.ttf) format('truetype');
+  src: local("Lato Bold Italic"), local("Lato-BoldItalic"),
+    url(https://fonts.gstatic.com/s/lato/v16/S6u_w4BMUTPHjxsI5wq_Gwfo.ttf)
+      format("truetype");
 }
 
 @font-face {
-  font-family: 'Lato';
+  font-family: "Lato";
   font-style: normal;
   font-weight: 300;
-  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh7USSwiPHA.ttf) format('truetype');
+  src: local("Lato Light"), local("Lato-Light"),
+    url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh7USSwiPHA.ttf)
+      format("truetype");
 }
 
 @font-face {
-  font-family: 'Lato';
+  font-family: "Lato";
   font-style: normal;
   font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
+  src: local("Lato Regular"), local("Lato-Regular"),
+    url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf)
+      format("truetype");
 }
 
 @font-face {
-  font-family: 'Lato';
+  font-family: "Lato";
   font-style: normal;
   font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPHA.ttf) format('truetype');
+  src: local("Lato Bold"), local("Lato-Bold"),
+    url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPHA.ttf)
+      format("truetype");
 }
 
 html {
-  background: white;
+  scrollbar-width: none;
 }
 
 body {
   font-family: "Lato", Helvetica, Arial, sans-serif;
+  background: transparent;
   font-weight: 400;
-  background: white;
-  margin: 50px 0 100px;
-  letter-spacing: .3px;
-  color: #39424B;
+  margin: 30px 0 50px;
+  letter-spacing: 0.3px;
+  color: #39424b;
 }
 
 h1,
@@ -93,22 +109,22 @@ h6 {
 h1 {
   font-family: Helvetica, Arial, "Josefin Sans", sans-serif;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 32px;
   letter-spacing: 1px;
 }
 
 h2 {
   font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
   font-weight: 300;
-  font-size: 16px;
-  letter-spacing: .5px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
 }
 
 h3 {
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 14px;
-  letter-spacing: .4px;
+  letter-spacing: 0.4px;
 }
 
 h3.bold {
@@ -147,7 +163,7 @@ a {
 }
 
 a:hover {
-  color: #2895F1;
+  color: #2895f1;
 }
 
 a .fa-external-link {
@@ -157,15 +173,15 @@ a .fa-external-link {
 
 p,
 li {
-  font-size: 11px;
+  font-size: 10px;
 }
 
 blockquote {
-  font-size: 11px;
+  font-size: 10px;
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-style: italic;
-  margin: 10px 25px;
+  margin: 8px 20px;
 }
 
 em {
@@ -173,12 +189,13 @@ em {
 }
 
 ul {
-  margin: 10px 0 0;
-  -webkit-padding-start: 25px;
+  margin: 5px 0 0;
+  -webkit-padding-start: 20px;
 }
 
 ul li {
-  padding-left: 10px;
+  padding-left: 8px;
+  margin-bottom: 2px;
 }
 
 ul.minimal {
@@ -187,8 +204,9 @@ ul.minimal {
 }
 
 ul.minimal li {
-  margin-bottom: 3px;
+  margin-bottom: 2px;
   padding-left: 0;
+  line-height: 1.2;
 }
 
 ul.two-column {
@@ -207,13 +225,13 @@ ul.two-column li {
 }
 
 .container {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .keyline {
   width: 45px;
   margin: 8px 0 10px;
-  border-top: 1px solid #56817A;
+  border-top: 1px solid #56817a;
 }
 
 .pull-left {
@@ -239,7 +257,7 @@ ul.two-column li {
   height: 52px;
   width: 52px;
   border-radius: 50%;
-  border: 2px solid #56817A;
+  border: 2px solid #56817a;
 }
 
 .summary {
@@ -263,8 +281,8 @@ ul.two-column li {
   min-height: 792px;
   display: block;
   margin: 0 auto;
-  border-top: 10px solid #56817A;
-  padding: 36px 22px 30px 34px;
+  border-top: 10px solid #56817a;
+  padding: 20px 10px 15px 15px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -276,18 +294,19 @@ ul.two-column li {
 
 .left-column {
   float: left;
-  width: 160px;
-  margin-right: 20px;
+  width: 180px;
+  margin-right: 2px;
   word-wrap: break-word;
 }
 
 .right-column {
   width: auto;
   overflow: hidden;
+  padding-right: 15px;
 }
 
 .item {
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 .item:last-child {
@@ -303,13 +322,13 @@ ul.two-column li {
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 36px 0 30px;
+    padding: 20px 0 15px;
     box-shadow: none;
   }
 
   .page .resume-header,
   .page .resume-content {
-    padding: 0 22px 0 34px;
+    padding: 0 15px 0 20px;
   }
 
   .container {
@@ -386,6 +405,8 @@ ul.two-column li {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 2px;
+  align-items: flex-start;
 }
 
 .main-skill {
@@ -393,10 +414,47 @@ ul.two-column li {
 }
 
 .skill {
-  margin: .15em;
-  padding: .15em;
-  background: ghostwhite;
-  border-radius: 5px;
+  margin: 0.05em;
+  padding: 0.1em 0.4em;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  font-size: 9px;
+  line-height: 1.3;
+  display: inline-block;
+}
+
+.skill-compact {
+  display: inline-block;
+  margin: 1px 2px;
+  padding: 1px 4px;
+  background: #f5f5f5;
+  border-radius: 2px;
+  font-size: 8px;
+  line-height: 1.2;
+}
+
+.skills-vertical-list {
+  margin: 0;
+  padding: 0;
+}
+
+.skills-vertical-list li {
+  margin-bottom: 2px;
+  padding: 0;
+  line-height: 1.2;
+  font-size: 9px;
+}
+
+.skill-vertical {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+  font-size: 9px;
+  line-height: 1.3;
+  display: inline-block;
+  margin: 0;
 }
 </style>
 </head>
@@ -440,7 +498,7 @@ ul.two-column li {
                     <i class="fa fa-globe"></i>
                 
                         <h6 class="info-text">
-                            <a href="aceamarco.dev" target="_blank">
+                            <a href="https://aceamarco.dev" target="_blank">
                                 aceamarco.dev
                             </a>
                         </h6>
@@ -470,33 +528,67 @@ ul.two-column li {
                             <div class="title">
                                 <h3>Programming Languages</h3>
                                 <div class="keyline"></div>
-                            </div>                    <div class="minimal flex-container">
-                                    <h6 class="main-skill skill">Python</h6>
-                                    <h6 class="main-skill skill">C++</h6>
-                                    <h6 class="main-skill skill">TypeScript</h6>
-                                    <h6 class="main-skill skill">JavaScript</h6>
-                            </div>
+                            </div>                    <ul class="minimal skills-vertical-list">
+                                    <li><h6 class="main-skill skill-vertical">Python</h6></li>
+                                    <li><h6 class="main-skill skill-vertical">C++</h6></li>
+                                    <li><h6 class="main-skill skill-vertical">TypeScript</h6></li>
+                                    <li><h6 class="main-skill skill-vertical">JavaScript</h6></li>
+                            </ul>
                     </section>
                     <section class="container">
                             <div class="title">
                                 <h3>Software/Frameworks</h3>
                                 <div class="keyline"></div>
-                            </div>                    <div class="minimal flex-container">
-                                    <h6 class="main-skill skill">OpenAI API</h6>
-                                    <h6 class="main-skill skill">🤗 Hugging Face</h6>
-                                    <h6 class="main-skill skill">PyTorch</h6>
-                                    <h6 class="main-skill skill">scikit-learn</h6>
-                                    <h6 class="main-skill skill">pandas</h6>
-                                    <h6 class="main-skill skill">Dask</h6>
-                                    <h6 class="main-skill skill">LLM Prompt Engineering</h6>
-                                    <h6 class="main-skill skill">Distributed Systems</h6>
-                                    <h6 class="main-skill skill">Bloomberg API</h6>
-                                    <h6 class="main-skill skill">Alpaca</h6>
-                            </div>
+                            </div>                    <ul class="minimal skills-vertical-list">
+                                    <li><h6 class="main-skill skill-vertical">OpenAI API</h6></li>
+                                    <li><h6 class="main-skill skill-vertical">🤗 Hugging Face</h6></li>
+                                    <li><h6 class="main-skill skill-vertical">PyTorch</h6></li>
+                                    <li><h6 class="main-skill skill-vertical">scikit-learn</h6></li>
+                                    <li><h6 class="main-skill skill-vertical">pandas</h6></li>
+                                    <li><h6 class="main-skill skill-vertical">Dask</h6></li>
+                                    <li><h6 class="main-skill skill-vertical">LLM Prompt Engineering</h6></li>
+                                    <li><h6 class="main-skill skill-vertical">Distributed Systems</h6></li>
+                                    <li><h6 class="main-skill skill-vertical">Bloomberg API</h6></li>
+                                    <li><h6 class="main-skill skill-vertical">Alpaca</h6></li>
+                                    <li><h6 class="main-skill skill-vertical">Algorithmic Trading</h6></li>
+                                    <li><h6 class="main-skill skill-vertical">Risk Management</h6></li>
+                                    <li><h6 class="main-skill skill-vertical">Real-time Systems</h6></li>
+                                    <li><h6 class="main-skill skill-vertical">Feature Engineering</h6></li>
+                                    <li><h6 class="main-skill skill-vertical">Production ML</h6></li>
+                            </ul>
                     </section>
             </div>
       </aside>
       <div class="right-column">
+        <div class="container education-container">
+            <div class="title">
+            <h3>Education</h3>
+            <div class="keyline"></div>
+        </div> 
+            <section class="item">
+                <div class="section-header clearfix">
+            <h3 class="bold pull-left">
+                    Carnegie Mellon University
+            </h3>
+            <h5 class="italic pull-right">
+                    <span class="startDate">08/2018</span>
+                    <span class="endDate"> - 12/2022</span>
+            </h5>
+        </div>
+         
+                <h4>Bachelor&#x27;s of Science in Electrical and Computer Engineering</h4>
+        
+          
+                <ul class="two-column">
+                    <li>Structure and Design of Digital Systems</li>
+                    <li>Web App Development</li>
+                    <li>Principles of Imperative Computing</li>
+                    <li>Logic Design and Verification</li>
+                    <li>Intro to Embedded Systems</li>
+                    <li>Fundamentals of Embedded Control</li>
+                </ul>
+            </section>
+        </div>
           <div class="container work-container">
             <div class="title">
                 <h3>Experience</h3>
@@ -518,7 +610,7 @@ ul.two-column li {
         
         
                   <ul>
-                      <li>Architected and delivered critical features for global trading platform serving thousands of financial firms, processing millions of daily transactions.</li>
+                      <li>Designed and delivered critical features for global trading platform serving thousands of financial firms, processing millions of daily transactions.</li>
                       <li>Built comprehensive monitoring and analytics systems tracking millions of user events, providing real-time insights and operational resilience.</li>
                       <li>Developed high-performance dashboards and data visualizations enabling traders to efficiently manage complex workflows across global markets.</li>
                       <li>Built self-optimizing LLM systems with advanced prompt engineering, creating intelligent automation that continuously refines model performance and accelerates development velocity.</li>
@@ -586,9 +678,38 @@ ul.two-column li {
           </div>
         <div class="container project-container">
             <div class="title">
-                <h3>Open Source Projects</h3>
+                <h3>Projects</h3>
                 <div class="keyline"></div>
             </div>
+                <section class="item">
+                    <div class="section-header clearfix">
+                        <h3 class="bold pull-left">
+                                Mid-Frequency ML Trading System
+                        </h3>
+                        <h5 class="italic pull-right">
+                                <span class="startDate">01/2023</span>
+                                <span class="endDate"> - 12/2023</span>
+                        </h5>
+                    </div>
+        
+        
+                    <div class="flex-container">
+                            <h6 class="skill">Algorithmic Trading</h6>
+                            <h6 class="skill">Risk Management</h6>
+                            <h6 class="skill">Real-time Systems</h6>
+                            <h6 class="skill">S&amp;P 500</h6>
+                            <h6 class="skill">Feature Engineering</h6>
+                            <h6 class="skill">Production ML</h6>
+                    </div>
+        
+        
+        
+                    <ul>
+                        <li>Built electronic trading system processing S&amp;P 500 data with neural networks (294K+ parameters) achieving 60%+ model accuracy and sub-100ms signal generation for real-time execution.</li>
+                        <li>Conceived and developed production-grade system with risk management, position sizing, and automated model retraining, featuring real-time P&amp;L tracking and order execution via Alpaca API.</li>
+                        <li>Implemented monitoring stack with Prometheus/Grafana tracking win rates, fill rates, model/system latency metrics across 500+ symbols with 50+ technical indicators.</li>
+                    </ul>
+                </section>
                 <section class="item">
                     <div class="section-header clearfix">
                         <h3 class="bold pull-left">
@@ -613,35 +734,6 @@ ul.two-column li {
                         <li>Built secure automation platform enabling self-service application deployment with multi-tenant access controls and safety guardrails, open-sourced and officially adopted into vetted community collection.</li>
                     </ul>
                 </section>
-        </div>
-        <div class="container education-container">
-            <div class="title">
-            <h3>Education</h3>
-            <div class="keyline"></div>
-        </div> 
-            <section class="item">
-                <div class="section-header clearfix">
-            <h3 class="bold pull-left">
-                    Carnegie Mellon University
-            </h3>
-            <h5 class="italic pull-right">
-                    <span class="startDate">08/2018</span>
-                    <span class="endDate"> - 12/2022</span>
-            </h5>
-        </div>
-         
-                <h4>Bachelor&#x27;s of Science in Electrical and Computer Engineering</h4>
-        
-          
-                <ul class="two-column">
-                    <li>Structure and Design of Digital Systems</li>
-                    <li>Web App Development</li>
-                    <li>Principles of Imperative Computing</li>
-                    <li>Logic Design and Verification</li>
-                    <li>Intro to Embedded Systems</li>
-                    <li>Fundamentals of Embedded Control</li>
-                </ul>
-            </section>
         </div>
       </div>
     </div>
