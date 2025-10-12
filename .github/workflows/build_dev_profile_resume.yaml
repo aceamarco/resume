@@ -32,7 +32,6 @@ jobs:
           npm i jsonresume-theme-macea-${{matrix.resumefiles}}@latest
 
       - name: Build recent resumes
-        continue-on-error: true
         run: |
           resume export --resume profiles/${{matrix.resumefiles}}/resume.json --theme=jsonresume-theme-macea-${{matrix.resumefiles}} profiles/${{matrix.resumefiles}}/resume.pdf
           resume export --resume profiles/${{matrix.resumefiles}}/resume.json --theme=jsonresume-theme-macea-${{matrix.resumefiles}} profiles/${{matrix.resumefiles}}/resume.html
