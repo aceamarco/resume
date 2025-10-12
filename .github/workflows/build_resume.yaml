@@ -31,6 +31,19 @@ jobs:
           resume export --theme=jsonresume-theme-macea resume.html
           mv resume.html index.html
 
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install PDF manipulation library
+        run: pip install pypdf
+
+      - name: Trim PDF to one page
+        run: |
+          python trim_pdf.py resume.pdf resume_temp.pdf
+          mv resume_temp.pdf resume.pdf
+
       - name: Update resources
         uses: test-room-7/action-update-file@v1
         with:
