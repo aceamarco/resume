@@ -4,32 +4,32 @@ on:
     branches:
       - dev
     paths:
-      - 'profiles/*/*.json'
-      - '.github/workflows/build_dev_profile_resume.yaml'
+      - "profiles/*/*.json"
+      - ".github/workflows/build_dev_profile_resume.yaml"
 
 jobs:
   #! NOTICE: Make sure to add any new profile names to this matrix if you want it to be generated!
   build:
     strategy:
-        matrix:
-          resumefiles: [ece]
+      matrix:
+        resumefiles: [ece]
 
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: 'dev'
+          ref: "dev"
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: "20"
 
       - name: Install dependencies if package-lock file was not found
         run: |
           npm i -g resume-cli
-          npm i jsonresume-theme-macea-${{matrix.resumefiles}}
+          npm i jsonresume-theme-macea-${{matrix.resumefiles}}@latest
 
       - name: Build recent resumes
         continue-on-error: true

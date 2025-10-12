@@ -4,8 +4,8 @@ on:
     branches:
       - master
     paths:
-      - 'resume.json'
-      - '.github/workflows/build_resume.yaml'
+      - "resume.json"
+      - ".github/workflows/build_resume.yaml"
 
 jobs:
   build:
@@ -17,12 +17,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: "20"
 
       - name: Install dependencies if package-lock file was not found
         run: |
           npm i -g resume-cli
-          npm i jsonresume-theme-macea
+          npm i jsonresume-theme-macea@latest
 
       - name: Build recent resumes
         continue-on-error: true
