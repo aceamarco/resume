@@ -42,6 +42,7 @@ jobs:
         run: |
           python trim_pdf.py resume.pdf resume_temp.pdf
           mv resume_temp.pdf resume.pdf
+          echo "PDF trimmed and replaced successfully"
 
       - name: Update resources
         uses: test-room-7/action-update-file@v1
