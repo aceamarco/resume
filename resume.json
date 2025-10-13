@@ -6,20 +6,16 @@
         "website" : "https://www.jessicarwallace.com/",
         "profiles" : [{
             "network" : "LinkedIn",
-            "username" : "marco-acea",
-            "url" : "https://www.linkedin.com/in/marco-TEST/"
-        },{
-            "network" : "Github",
             "username" : "jessicawallace2",
-            "url" : "https://www.linkedin.com/in/jessicawallace2/"
-        }]
+            "url" : "https://www.linkedin.com/in/jessicawallace2/""
+        },
     },
     "education" : [{
         "institution" : "Carnegie Mellon University",
-        "area" : "Electrical and Computer Engineering",
+        "area" : "Mechanical Engineering",
         "studyType" : "Bachelor's of Science",
         "startDate" : "2018-08",
-        "endDate" : "2022-12",
+        "endDate" : "2023-05",
         "courses" : [
             "Structure and Design of Digital Systems",
             "Web App Development",
