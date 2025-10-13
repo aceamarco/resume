@@ -72,14 +72,15 @@ jobs:
               # Navigate to the directory
               cd "$GITHUB_WORKSPACE/$DIR"
               
-              # Install theme locally in this profile directory
+              # Initialize npm and install theme locally in this profile directory
               echo "Installing theme in $DIR"
-              npm install jsonresume-theme-macea@latest
+              npm init -y
+              npm install --save jsonresume-theme-macea@latest
               
               # Build HTML and PDF
               echo "Building resume.html and resume.pdf in $DIR"
-              resume export --theme=jsonresume-theme-macea resume.html
-              resume export --theme=jsonresume-theme-macea resume.pdf
+              npx resume export --theme jsonresume-theme-macea resume.html
+              npx resume export --theme jsonresume-theme-macea resume.pdf
               
               # Trim PDF to one page if trim_pdf.py exists in root
               if [ -f "$GITHUB_WORKSPACE/trim_pdf.py" ]; then
