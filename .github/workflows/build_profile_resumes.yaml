@@ -79,7 +79,9 @@ jobs:
               # Build HTML and PDF
               echo "Building resume.html and resume.pdf in $DIR"
               resume export --theme=jsonresume-theme-macea resume.html
-              resume export --theme=jsonresume-theme-macea resume.pdf
+              
+              # Export PDF with Chromium flags for CI environment
+              PUPPETEER_ARGS="--no-sandbox --disable-setuid-sandbox" resume export --theme=jsonresume-theme-macea resume.pdf
               
               # Trim PDF to one page if trim_pdf.py exists in root
               if [ -f "$GITHUB_WORKSPACE/trim_pdf.py" ]; then

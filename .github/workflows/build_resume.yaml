@@ -26,9 +26,12 @@ jobs:
 
       - name: Build recent resumes
         run: |
-          resume export --theme=jsonresume-theme-macea resume.pdf
+          # Export HTML
           resume export --theme=jsonresume-theme-macea resume.html
           mv resume.html index.html
+
+          # Export PDF with --no-sandbox flag for CI environment
+          PUPPETEER_ARGS="--no-sandbox --disable-setuid-sandbox" resume export --theme=jsonresume-theme-macea resume.pdf
 
       - name: Setup Python
         uses: actions/setup-python@v4
