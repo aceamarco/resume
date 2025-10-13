@@ -2,16 +2,16 @@
         "basics" : {
         "name" : "Jessica Wallace",
         "email" : "jessicawallace3000@gmail.com",
-        "phone" : "(786) 470-9891",
-        "website" : "https://aceamarco.dev",
+        "phone" : "(917) 797-0057",
+        "website" : "https://www.jessicarwallace.com/",
         "profiles" : [{
             "network" : "LinkedIn",
             "username" : "marco-acea",
             "url" : "https://www.linkedin.com/in/marco-TEST/"
         },{
             "network" : "Github",
-            "username" : "aceamarco",
-            "url" : "https://github.com/aceamarco"
+            "username" : "jessicawallace2",
+            "url" : "https://www.linkedin.com/in/jessicawallace2/"
         }]
     },
     "education" : [{
