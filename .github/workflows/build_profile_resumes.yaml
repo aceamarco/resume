@@ -1,0 +1,107 @@
+name: Build Profile Resumes
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "profiles/**/resume.json"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Fetch all history to detect changed files
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+
+      - name: Install resume-cli and theme
+        run: |
+          npm i -g resume-cli
+          npm i jsonresume-theme-macea@latest
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install PDF manipulation library
+        run: pip install pypdf
+
+      - name: Get changed resume.json files
+        id: changed-files
+        run: |
+          # Get list of changed files in the push
+          CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep "profiles/.*/resume.json" || true)
+
+          # If this is the first commit, compare with empty tree
+          if [ -z "${{ github.event.before }}" ] || [ "${{ github.event.before }}" == "0000000000000000000000000000000000000000" ]; then
+            CHANGED_FILES=$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | grep "profiles/.*/resume.json" || true)
+          fi
+
+          echo "Changed resume.json files:"
+          echo "$CHANGED_FILES"
+          echo "files<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGED_FILES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Build resumes for each profile
+        run: |
+          # Read the changed files from the previous step
+          CHANGED_FILES="${{ steps.changed-files.outputs.files }}"
+
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "No resume.json files changed in profiles directory"
+            exit 0
+          fi
+
+          # Process each changed resume.json file
+          echo "$CHANGED_FILES" | while IFS= read -r file; do
+            if [ -n "$file" ]; then
+              echo "Processing: $file"
+              
+              # Get the directory containing the resume.json
+              DIR=$(dirname "$file")
+              echo "Directory: $DIR"
+              
+              # Navigate to the directory
+              cd "$GITHUB_WORKSPACE/$DIR"
+              
+              # Build HTML and PDF
+              echo "Building resume.html and resume.pdf in $DIR"
+              resume export --theme=jsonresume-theme-macea resume.html
+              resume export --theme=jsonresume-theme-macea resume.pdf
+              
+              # Trim PDF to one page if trim_pdf.py exists in root
+              if [ -f "$GITHUB_WORKSPACE/trim_pdf.py" ]; then
+                echo "Trimming PDF to one page"
+                python "$GITHUB_WORKSPACE/trim_pdf.py" resume.pdf resume_temp.pdf
+                mv resume_temp.pdf resume.pdf
+                echo "PDF trimmed successfully"
+              fi
+              
+              # Go back to workspace root for next iteration
+              cd "$GITHUB_WORKSPACE"
+            fi
+          done
+
+      - name: Commit and push generated files
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          # Add all generated resume files in profiles
+          git add profiles/**/resume.html profiles/**/resume.pdf
+
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update profile resumes"
+            git push
+          fi
