@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - uses: actions/checkout@v3
@@ -26,34 +26,9 @@ jobs:
 
       - name: Build recent resumes
         run: |
-          # Create Puppeteer config for CI environment (no sandbox)
-          cat > .puppeteerrc.cjs << 'EOF'
-          const {join} = require('path');
-          module.exports = {
-            executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || '/usr/bin/google-chrome-stable',
-            args: ['--no-sandbox', '--disable-setuid-sandbox'],
-          };
-          EOF
-
-          # Export HTML
+          resume export --theme=jsonresume-theme-macea resume.pdf
           resume export --theme=jsonresume-theme-macea resume.html
           mv resume.html index.html
-
-          # Export PDF
-          echo "Generating PDF..."
-          if resume export --theme=jsonresume-theme-macea resume.pdf; then
-            echo "PDF generated successfully"
-            if [ ! -f resume.pdf ]; then
-              echo "ERROR: PDF file was not created!"
-              exit 1
-            fi
-          else
-            echo "ERROR: PDF generation failed!"
-            exit 1
-          fi
-
-          # Clean up config file
-          rm -f .puppeteerrc.cjs
 
       - name: Setup Python
         uses: actions/setup-python@v4
