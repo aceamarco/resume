@@ -76,12 +76,36 @@ jobs:
               echo "Installing theme in $DIR"
               npm install jsonresume-theme-macea@latest
               
+              # Create Puppeteer config for CI environment (no sandbox)
+              cat > .puppeteerrc.cjs << 'EOF'
+const {join} = require('path');
+module.exports = {
+  executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || '/usr/bin/google-chrome-stable',
+  args: ['--no-sandbox', '--disable-setuid-sandbox'],
+};
+EOF
+              
               # Build HTML and PDF
               echo "Building resume.html and resume.pdf in $DIR"
               resume export --theme=jsonresume-theme-macea resume.html
               
-              # Export PDF with Chromium flags for CI environment
-              PUPPETEER_ARGS="--no-sandbox --disable-setuid-sandbox" resume export --theme=jsonresume-theme-macea resume.pdf
+              # Export PDF with error handling
+              echo "Generating PDF..."
+              if resume export --theme=jsonresume-theme-macea resume.pdf; then
+                echo "PDF generated successfully"
+                
+                # Verify PDF was actually created
+                if [ ! -f resume.pdf ]; then
+                  echo "ERROR: PDF file was not created!"
+                  exit 1
+                fi
+              else
+                echo "ERROR: PDF generation failed!"
+                exit 1
+              fi
+              
+              # Clean up config file
+              rm -f .puppeteerrc.cjs
               
               # Trim PDF to one page if trim_pdf.py exists in root
               if [ -f "$GITHUB_WORKSPACE/trim_pdf.py" ]; then
