@@ -1,0 +1,113 @@
+{
+    "basics": {
+        "name": "Jane Doe",
+        "email": "jane.doe@example.com",
+        "phone": "(555) 123-4567",
+        "profiles": [{
+            "network": "LinkedIn",
+            "username": "jane-doe",
+            "url": "https://www.linkedin.com/in/jane-doe/"
+        }, {
+            "network": "Github",
+            "username": "janedoe",
+            "url": "https://github.com/janedoe"
+        }]
+    },
+    "education": [{
+        "institution": "Stanford University",
+        "area": "Computer Science",
+        "studyType": "Bachelor of Science",
+        "startDate": "2019-09",
+        "endDate": "2023-06",
+        "courses": [
+            "Machine Learning",
+            "Data Structures and Algorithms",
+            "Computer Networks",
+            "Database Systems",
+            "Artificial Intelligence",
+            "Web Development"
+        ]
+    }],
+    "skills": [
+        {
+            "name": "Programming Languages",
+            "keywords": [
+                "Python",
+                "JavaScript",
+                "Java",
+                "C++",
+                "SQL"
+            ]
+        },
+        {
+            "name": "Software/Frameworks",
+            "keywords": [
+                "React",
+                "Node.js",
+                "TensorFlow",
+                "Docker",
+                "PostgreSQL",
+                "AWS"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "AI-Powered Chatbot",
+            "startDate": "2023-01",
+            "endDate": "2023-05",
+            "highlights": [
+                "Built a conversational AI chatbot using natural language processing",
+                "Integrated with multiple messaging platforms including Slack and Discord",
+                "Deployed on AWS Lambda with 99.9% uptime"
+            ],
+            "keywords": ["Machine Learning", "Artificial Intelligence"]
+        },
+        {
+            "name": "E-Commerce Platform",
+            "startDate": "2022-06",
+            "endDate": "2022-12",
+            "highlights": [
+                "Developed full-stack e-commerce application using React and Node.js",
+                "Implemented payment processing with Stripe API",
+                "Designed and optimized PostgreSQL database schema"
+            ],
+            "keywords": ["Web Development", "Database Systems"]
+        },
+        {
+            "name": "Social Media Analytics Dashboard",
+            "startDate": "2022-01",
+            "endDate": "2022-05",
+            "highlights": [
+                "Created real-time analytics dashboard for social media metrics",
+                "Processed over 1 million data points daily",
+                "Built RESTful API with rate limiting and caching"
+            ],
+            "keywords": ["Data Structures and Algorithms"]
+        }
+    ],
+    "work": [
+        {
+            "company": "Google",
+            "position": "Software Engineering Intern",
+            "startDate": "2022-06",
+            "endDate": "2022-09",
+            "highlights": [
+                "Developed new features for Google Cloud Platform",
+                "Improved performance of distributed systems by 25%",
+                "Collaborated with cross-functional teams on product launches"
+            ]
+        },
+        {
+            "company": "Meta",
+            "position": "Software Engineering Intern",
+            "startDate": "2021-06",
+            "endDate": "2021-08",
+            "highlights": [
+                "Built internal tools for data analysis and visualization",
+                "Optimized React components reducing load times by 40%"
+            ]
+        }
+    ]
+}
+
