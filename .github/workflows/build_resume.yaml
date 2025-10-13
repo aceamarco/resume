@@ -4,8 +4,7 @@ on:
     branches:
       - master
     paths:
-      - "resume.json"
-      - ".github/workflows/build_resume.yaml"
+      - "**"
 
 jobs:
   build:
@@ -41,7 +40,8 @@ jobs:
       - name: Trim PDF to one page
         run: |
           python trim_pdf.py resume.pdf resume_temp.pdf
-          mv resume_temp.pdf resume.pdf
+          cp resume_temp.pdf resume.pdf
+          rm resume_temp.pdf
           echo "PDF trimmed and replaced successfully"
 
       - name: Update resources
