@@ -1,6 +1,6 @@
 {
         "basics" : {
-        "name" : "Marco Acea",
+        "name" : "John Smith",
         "email" : "aceamarco@gmail.com",
         "phone" : "(786) 470-9891",
         "profiles" : [{
@@ -16,7 +16,7 @@
     "education" : [{
         "institution" : "Carnegie Mellon University",
         "area" : "Electrical and Computer Engineering",
-        "studyType" : "Bachelor's of Science",
+        "studyType" : "Bachelor of Science",
         "startDate" : "2018-08",
         "endDate" : "2022-12",
         "courses" : [
