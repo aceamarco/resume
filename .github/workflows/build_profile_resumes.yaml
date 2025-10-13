@@ -72,6 +72,10 @@ jobs:
               # Navigate to the directory
               cd "$GITHUB_WORKSPACE/$DIR"
               
+              # Install theme locally in this profile directory
+              echo "Installing theme in $DIR"
+              npm install jsonresume-theme-macea@latest
+              
               # Build HTML and PDF
               echo "Building resume.html and resume.pdf in $DIR"
               resume export --theme=jsonresume-theme-macea resume.html

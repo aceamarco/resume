@@ -4,7 +4,8 @@ on:
     branches:
       - master
     paths:
-      - "**"
+      - "resume.json"
+      - ".github/workflows/build_resume.yaml"
 
 jobs:
   build:
