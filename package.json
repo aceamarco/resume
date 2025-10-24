@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "npx serve ."
+  },
   "dependencies": {
     "jsonresume-theme-macea": "^0.0.5",
     "jsonresume-theme-macea-ece": "^0.0.1"
