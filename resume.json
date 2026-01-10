@@ -60,7 +60,24 @@
         ]
         }
     ],
-    "projects" : [{
+    "projects" : [
+        {
+            "name": "A/B Testing Risk Analysis Platform",
+            "startDate": "2025-10",
+            "endDate": "",
+            "highlights": [
+                "Built a Python-based A/B testing analysis platform used to analyze large-scale behavioral data and extract actionable signals from 10,000+ experimental samples",
+                "Used unsupervised pattern discovery to identify non-obvious anomalies and structural deviations across experiments before client impact",
+                "Identified 5 critical integration issues and 3 runtime anomalies, reducing  rollout risk by 20% across experiments affecting thousands of users globally"
+            ],
+            "keywords": [
+                "Unsupervised Learning",
+                "A/B Testing",
+                "Quantitative Analysis",
+                "Equities"
+            ]
+        }
+        ,{
         "name" : "Mid-Frequency ML Trading System",
         "highlights" : [
             "Built electronic trading system processing S&P 500 data with neural networks (294K+ parameters) achieving 60%+ model accuracy and sub-100ms signal generation for real-time execution.",
@@ -71,33 +88,20 @@
             "Algorithmic Trading",
             "Risk Management",
             "Real-time Systems",
-            "S&P 500",
-            "Feature Engineering",
-            "Production ML"
+            "Feature Engineering"
         ]
-    },{
-        "name" : "ArgoCD AppSource Controller",
-        "startDate" : "2021-05",
-        "endDate" : "2021-08",
-        "highlights" : [
-            "Built secure automation platform enabling self-service application deployment with multi-tenant access controls and safety guardrails, open-sourced and officially adopted into vetted community collection."
-        ],
-        "keywords" : [
-            "Golang",
-            "Kubernetes",
-            "ArgoCD"
-        ]}],
+    }],
     "work" : [
         {
-            "company": "Bloomberg L.P",
-            "position": "Software Engineer - Electronic Trading Order Management Systems (ETOMS)",
+            "company": "Bloomberg L.P.",
+            "position": "Software Engineer – Electronic Trading Order Management Systems",
             "startDate": "2024-07",
             "endDate": "",
             "highlights": [
-                "Designed and delivered critical features for global trading platform serving thousands of financial firms, processing millions of daily transactions.",
-                "Built comprehensive monitoring and analytics systems tracking millions of user events, providing real-time insights and operational resilience.",
-                "Developed high-performance dashboards and data visualizations enabling traders to efficiently manage complex workflows across global markets.",
-                "Built self-optimizing LLM systems with advanced prompt engineering, creating intelligent automation that continuously refines model performance and accelerates development velocity."
+                "Contributed to a global electronic trading order management system used by thousands of financial institutions, supporting millions of trades and order events daily",
+                "Led development of an A/B testing and analysis framework that evaluated 10,000+ samples and identified high-impact issues before affecting live trading workflows",
+                "Built distributed logging and tracing tools to pinpoint system latency bottlenecks, reducing critical execution delays by up to 5+ seconds and improving trader responsiveness",
+                "Developed intuitive analytics dashboards that allowed trading desks, product teams, and engineers to audit system behavior and performance within seconds rather than hours"
             ]
         },        
         {
