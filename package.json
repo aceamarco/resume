@@ -1,9 +1,20 @@
 {
   "scripts": {
-    "start": "npx serve ."
+    "start": "npx serve .",
+    "serve": "npx serve .",
+    "build": "npm run build:html && npm run build:pdf",
+    "build:html": "resume export --theme jsonresume-theme-macea index.html",
+    "build:pdf": "RESUME_PUPPETEER_NO_SANDBOX=1 resume export --theme jsonresume-theme-macea resume.pdf && npm run trim",
+    "trim": "python3 trim_pdf.py resume.pdf resume_temp.pdf && mv resume_temp.pdf resume.pdf",
+    "build:profile": "resume export --resume profiles/$PROFILE/resume.json --theme ${THEME:-jsonresume-theme-macea} profiles/$PROFILE/resume.html && RESUME_PUPPETEER_NO_SANDBOX=1 resume export --resume profiles/$PROFILE/resume.json --theme ${THEME:-jsonresume-theme-macea} profiles/$PROFILE/resume.pdf && python3 trim_pdf.py profiles/$PROFILE/resume.pdf profiles/$PROFILE/resume_temp.pdf && mv profiles/$PROFILE/resume_temp.pdf profiles/$PROFILE/resume.pdf",
+    "build:ece": "PROFILE=ece THEME=jsonresume-theme-macea-ece npm run build:profile",
+    "preview": "npm run build && npm run serve"
   },
   "dependencies": {
     "jsonresume-theme-macea": "^0.0.5",
     "jsonresume-theme-macea-ece": "^0.0.1"
+  },
+  "devDependencies": {
+    "resume-cli": "^3.1.1"
   }
 }

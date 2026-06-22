@@ -18,32 +18,20 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "20"
-
-      - name: Install dependencies if package-lock file was not found
-        run: |
-          npm i -g resume-cli
-          npm i jsonresume-theme-macea@latest
-
-      - name: Build recent resumes
-        run: |
-          resume export --theme=jsonresume-theme-macea resume.pdf
-          resume export --theme=jsonresume-theme-macea resume.html
-          mv resume.html index.html
+          cache: "npm"
 
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.11"
 
-      - name: Install PDF manipulation library
-        run: pip install pypdf
-
-      - name: Trim PDF to one page
+      - name: Install dependencies
         run: |
-          python trim_pdf.py resume.pdf resume_temp.pdf
-          cp resume_temp.pdf resume.pdf
-          rm resume_temp.pdf
-          echo "PDF trimmed and replaced successfully"
+          npm ci
+          pip install pypdf
+
+      - name: Build resume (HTML + one-page PDF)
+        run: npm run build
 
       - name: Update resources
         uses: test-room-7/action-update-file@v1

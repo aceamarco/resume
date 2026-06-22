@@ -20,18 +20,20 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "20"
+          cache: "npm"
 
-      - name: Install dependencies if package-lock file was not found
-        run: |
-          npm i -g resume-cli
-          npm i jsonresume-theme-macea@latest
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
 
-      - name: Build recent resumes
+      - name: Install dependencies
         run: |
-          export RESUME_PUPPETEER_NO_SANDBOX=1
-          resume export --theme=jsonresume-theme-macea resume.pdf
-          resume export --theme=jsonresume-theme-macea resume.html
-          mv resume.html index.html
+          npm ci
+          pip install pypdf
+
+      - name: Build resume (HTML + one-page PDF)
+        run: npm run build
 
       - name: Update resources
         uses: test-room-7/action-update-file@v1

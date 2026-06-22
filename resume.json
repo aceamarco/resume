@@ -19,15 +19,7 @@
         "area" : "Electrical and Computer Engineering",
         "studyType" : "Bachelor's of Science",
         "startDate" : "2018-08",
-        "endDate" : "2022-12",
-        "courses" : [
-            "Structure and Design of Digital Systems",
-            "Web App Development",
-            "Principles of Imperative Computing",
-            "Logic Design and Verification",
-            "Intro to Embedded Systems",
-            "Fundamentals of Embedded Control"
-        ]
+        "endDate" : "2022-12"
     }],
     "skills": [
         {
@@ -64,7 +56,7 @@
         {
             "name": "A/B Testing Risk Analysis Platform",
             "startDate": "2025-10",
-            "endDate": "",
+            "endDate": "2026-05",
             "highlights": [
                 "Built a Python-based A/B testing analysis platform used to analyze large-scale behavioral data and extract actionable signals from 10,000+ experimental samples",
                 "Used unsupervised pattern discovery to identify non-obvious anomalies and structural deviations across experiments before client impact",
@@ -77,33 +69,30 @@
                 "Equities"
             ]
         }
-        ,{
-        "name" : "Mid-Frequency ML Trading System",
-        "highlights" : [
-            "Built electronic trading system processing S&P 500 data with neural networks (294K+ parameters) achieving 60%+ model accuracy and sub-100ms signal generation for real-time execution.",
-            "Conceived and developed production-grade system with risk management, position sizing, and automated model retraining, featuring real-time P&L tracking and order execution via Alpaca API.",
-            "Implemented monitoring stack with Prometheus/Grafana tracking win rates, fill rates, model/system latency metrics across 500+ symbols with 50+ technical indicators."
-        ],
-        "keywords" : [
-            "Algorithmic Trading",
-            "Risk Management",
-            "Real-time Systems",
-            "Feature Engineering"
-        ]
-    }],
+    ],
     "work" : [
+        {
+            "company": "Bloomberg L.P.",
+            "position": "Software Engineer – EMSX API",
+            "startDate": "2026-05",
+            "endDate": "",
+            "highlights": [
+                "Contributing to the EMSX API, a high-load, fully transactional Bloomberg API service enabling programmatic automation of Equities, Futures, and Options trading across 2000+ global execution venues",
+                "Supporting real-time order and route blotter subscriptions that stream as-at-now C.R.U.D. events to institutional clients, powering low-latency local replicas of trading state for downstream business logic"
+            ]
+        },
         {
             "company": "Bloomberg L.P.",
             "position": "Software Engineer – Electronic Trading Order Management Systems",
             "startDate": "2024-07",
-            "endDate": "",
+            "endDate": "2026-05",
             "highlights": [
                 "Contributed to a global electronic trading order management system used by thousands of financial institutions, supporting millions of trades and order events daily",
                 "Led development of an A/B testing and analysis framework that evaluated 10,000+ samples and identified high-impact issues before affecting live trading workflows",
                 "Built distributed logging and tracing tools to pinpoint system latency bottlenecks, reducing critical execution delays by up to 5+ seconds and improving trader responsiveness",
                 "Developed intuitive analytics dashboards that allowed trading desks, product teams, and engineers to audit system behavior and performance within seconds rather than hours"
             ]
-        },        
+        },
         {
             "company" : "Boeing",
             "position" : "Software Engineer",
